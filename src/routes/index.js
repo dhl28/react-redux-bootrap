@@ -9,12 +9,7 @@ import noFoundComponent from '../components/404'
 const home ={ path: 'home',
     component: Homepage
 }
-//数据上报
-const report = (location, cb) => {
-    require.ensure([], require => {
-        cb(null, require('../report/index').default)
-    },'report')
-}
+
 //我的分析
 const analysis = (location, cb) => {
     require.ensure([], require => {
@@ -23,7 +18,12 @@ const analysis = (location, cb) => {
 }
 const getChildRoutes = (location, cb) => {
     require.ensure([], require => {
-        cb(null, [home,require('./workbench-route').default])
+        cb(null, [
+            home,
+            require('./workbench-route').default,
+            require('./report-route').default,
+            require('./analysis-route').default,
+        ])
     })
 }
 
