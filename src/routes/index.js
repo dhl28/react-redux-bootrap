@@ -5,17 +5,18 @@ import App from '../App';
 import Homepage from '../homepage/Homepage'
 import noFoundComponent from '../components/404'
 
+const test = (location, cb) => {
+    require.ensure([], require => {
+        cb(null, require('../components/Homepage').default)
+    },'test')
+}
 //首页
 const home ={ path: 'home',
-    component: Homepage
+    getComponent: test
 }
 
 //我的分析
-const analysis = (location, cb) => {
-    require.ensure([], require => {
-        cb(null, require('../analysis/index').default)
-    },'analysis')
-}
+
 const getChildRoutes = (location, cb) => {
     require.ensure([], require => {
         cb(null, [
