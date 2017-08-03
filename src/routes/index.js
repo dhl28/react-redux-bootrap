@@ -4,10 +4,11 @@
 import App from '../App';
 import Homepage from '../homepage/Homepage'
 import noFoundComponent from '../components/404'
+import Login from './../components/Login/Login'
 
 const test = (location, cb) => {
     require.ensure([], require => {
-        cb(null, require('../components/Homepage').default)
+        cb(null, require('../components/show-case/Products').default)
     },'test')
 }
 //首页
@@ -34,6 +35,10 @@ const routeConfig = [
         component: App,
         indexRoute: { component: Homepage },
         getChildRoutes:getChildRoutes
+    },
+    {
+        path: '/login',
+        component: Login,
     },
     {
         path: '/404',

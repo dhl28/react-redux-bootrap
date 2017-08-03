@@ -14,6 +14,9 @@ export const fetchData = (state = defaultlState , action = {}) => {
         case REQUEST_POSTS:
             return state.set('isFetching',true);
         case RECEIVE_POSTS:
+            console.log('========fetchData=======');
+            console.log(action);
+            console.log('========fetchData=======');
             return Immutable.Map({'data':action.json,'isFetching':false});//返回一个新的state
         default:
             return state

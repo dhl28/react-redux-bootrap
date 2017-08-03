@@ -126,6 +126,25 @@ export const getData = (path, postData, success, name) => {
     }
 }
 
+//post
+export const postData = (path, postData, success, name) => {
+    return dispatch => {
+        // dispatch(getDataStart(postData))
+        return fetch(path,{
+            method: 'POST',
+            headers: {
+                'accept':'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(postData),
+            mode: 'cors'
+        })
+            .then(response => response.json())
+            .then(json => dispatch(getDataSuccess(path, json, success, name)))
+            .catch(error => console.log(error))
+    }
+}
+
 
 //记录单个商品列表状态
 export const testAction = (data) => {
