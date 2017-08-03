@@ -3,7 +3,7 @@
  */
 const analysis = (location, cb) => {
     require.ensure([], require => {
-        cb(null, require('../analysis/index').default)
+        cb(null, require('../Components/analysis/index').default)
     }, 'analysis')
 }
 

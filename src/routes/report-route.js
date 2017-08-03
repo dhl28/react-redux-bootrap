@@ -4,7 +4,7 @@
 
 const report = (location, cb) => {
     require.ensure([], require => {
-        cb(null, require('../report/index').default)
+        cb(null, require('../Components/report/index').default)
     }, 'report')
 }
 

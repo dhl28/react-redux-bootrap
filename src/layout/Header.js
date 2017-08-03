@@ -5,6 +5,9 @@ import React, {Component} from 'react';
 import {Link} from 'react-router'
 import {Menu, Icon} from 'antd';
 
+const SubMenu = Menu.SubMenu;
+const MenuItemGroup = Menu.ItemGroup;
+
 class Header extends Component {
     state = {
         current: 'mail',
@@ -35,6 +38,12 @@ class Header extends Component {
                 <Menu.Item key="analysis">
                     <Link to="/analysis">我的分析</Link>
                 </Menu.Item>
+                <SubMenu title={<span>react组件实例</span>}>
+                    <Menu.Item key="showcase">
+                        <Link to="/showcase/products">产品列表</Link>
+                    </Menu.Item>
+                </SubMenu>
+
             </Menu>
         );
     }

@@ -5,13 +5,13 @@
 //工作台-首页
 const workbench = (location, cb) => {
     require.ensure([], require => {
-        cb(null, require('../workbench/index').default)
+        cb(null, require('../Components/workbench/index').default)
     }, 'workbench')
 }
 //故事板
 const storyboard = (location, cb) => {
     require.ensure([], require => {
-        cb(null, require('../workbench/story-board/index').default)
+        cb(null, require('../Components/workbench/story-board/index').default)
     }, 'storyboard')
 }
 

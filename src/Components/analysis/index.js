@@ -7,7 +7,7 @@ class AnalysisIndex extends Component {
     render() {
         return (
             <div>
-                <h2>工作台</h2>
+                <h2>我的分析</h2>
             </div>
         );
     }
