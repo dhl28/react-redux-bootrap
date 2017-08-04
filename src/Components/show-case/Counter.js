@@ -31,7 +31,6 @@ Counter.propTypes = {
 
 const mapStateToProps = (state)=> {
     let {counter} = state;
-    console.log('mapState to prop1s');
     console.log(state);
     return {
         value: counter.count

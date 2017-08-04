@@ -5,7 +5,7 @@ import React,{Component} from 'react'
 //产品列表
 const Products = (location, cb) => {
     require.ensure([], require => {
-        cb(null, require('../Components/show-case/Products').default)
+        cb(null, require('../Components/show-case/Product').default)
     },'products')
 }
 //计数器
