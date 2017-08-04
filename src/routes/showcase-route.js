@@ -17,14 +17,14 @@ const Counter = (location, cb) => {
 class Index extends Component{
     render() {
         return (
-            <div>
+            <div style={{height:'100%'}}>
                 {this.props.children}
             </div>
         );
     }
 }
 
-const workbenchRoute = {
+const Router = {
     path: 'showcase',
     component: Index,
     childRoutes: [
@@ -32,4 +32,4 @@ const workbenchRoute = {
         {path: 'counter', getComponent: Counter},
     ]
 }
-export default workbenchRoute;
+export default Router;

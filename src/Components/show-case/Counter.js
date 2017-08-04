@@ -1,21 +1,23 @@
-
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import ReactDOM from 'react-dom'
-import { createStore } from 'redux'
-import { Provider, connect } from 'react-redux'
-import {Header,template} from '../common/mixin';
+import {connect} from 'react-redux'
+
+import { Button } from 'antd';
+import * as mapDispatchToProps from '../../Redux/Action/Counter'
+
+import './counter.css'
 
 // React component
 class Counter extends Component {
     render() {
-        const { value, onIncreaseClick ,onDecreaseClick} = this.props
+        const {value, onIncreaseClick, onDecreaseClick} = this.props
         console.log(this.props);
         return (
-            <div>
-                <span>{value}</span>
-                <button onClick={onIncreaseClick}>Increase</button>
-                <button onClick={onDecreaseClick}>Decrease</button>
+            <div className="container">
+                <h2>计数器</h2>
+                <span className="value">{value}</span>
+                <Button  type="primary" onClick={onIncreaseClick}>+</Button>
+                <Button onClick={onDecreaseClick}>-</Button>
             </div>
         )
     }
@@ -27,7 +29,7 @@ Counter.propTypes = {
     onDecreaseClick: PropTypes.func.isRequired
 }
 
-const mapStateToProps = (state)=>{
+const mapStateToProps = (state)=> {
     let {counter} = state;
     console.log('mapState to prop1s');
     console.log(state);
@@ -36,7 +38,8 @@ const mapStateToProps = (state)=>{
     }
 }
 
-export default template({
-    id: 'counter',  //应用关联使用的redux
-    component: Counter, //接收数据的组件入口
-},mapStateToProps);
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Counter)
