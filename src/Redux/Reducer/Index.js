@@ -72,4 +72,5 @@ export const saleRecord = (state = Immutable.fromJS({}) , action = {}) => {
     }
 }
 
-
+//计数器
+export * from './Counter'

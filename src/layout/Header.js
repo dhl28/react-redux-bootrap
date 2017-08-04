@@ -42,6 +42,9 @@ class Header extends Component {
                     <Menu.Item key="showcase">
                         <Link to="/showcase/products">产品列表</Link>
                     </Menu.Item>
+                    <Menu.Item key="counter">
+                        <Link to="/showcase/counter">计数器</Link>
+                    </Menu.Item>
                 </SubMenu>
 
             </Menu>
