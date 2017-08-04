@@ -40,7 +40,7 @@ class Header extends Component {
                 </Menu.Item>
                 <SubMenu title={<span>react组件实例</span>}>
                     <Menu.Item key="showcase">
-                        <Link to="/showcase/products">产品列表</Link>
+                        <Link to="/showcase/users">用户列表</Link>
                     </Menu.Item>
                     <Menu.Item key="counter">
                         <Link to="/showcase/counter">计数器</Link>

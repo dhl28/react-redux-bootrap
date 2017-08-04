@@ -3,9 +3,9 @@
  */
 import React,{Component} from 'react'
 //产品列表
-const Products = (location, cb) => {
+const Users = (location, cb) => {
     require.ensure([], require => {
-        cb(null, require('../Components/show-case/Product').default)
+        cb(null, require('../Components/show-case/Users').default)
     },'products')
 }
 //计数器
@@ -28,7 +28,7 @@ const Router = {
     path: 'showcase',
     component: Index,
     childRoutes: [
-        {path: 'products', getComponent: Products},
+        {path: 'users', getComponent: Users},
         {path: 'counter', getComponent: Counter},
     ]
 }

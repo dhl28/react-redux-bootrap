@@ -39,7 +39,7 @@ const Main = (mySeting,mapStateToProps ) => {
         }
 
         shouldComponentUpdate(nextProps, nextState) {
-            if (nextProps.state.get('isFetching')) {
+            if (nextProps.state['isFetching']) {
                 return false
             }
             return !is(fromJS(this.props), fromJS(nextProps)) || !is(fromJS(this.state),fromJS(nextState))
