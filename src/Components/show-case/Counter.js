@@ -27,8 +27,16 @@ Counter.propTypes = {
     onDecreaseClick: PropTypes.func.isRequired
 }
 
+const mapStateToProps = (state)=>{
+    let {counter} = state;
+    console.log('mapState to prop1s');
+    console.log(state);
+    return {
+        value: counter.count
+    }
+}
 
 export default template({
     id: 'counter',  //应用关联使用的redux
     component: Counter, //接收数据的组件入口
-});
+},mapStateToProps);

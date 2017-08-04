@@ -5,7 +5,7 @@ import { is, fromJS} from 'immutable';
 import *as action from '../../Redux/Action/Index';
 
 
-const Main = mySeting => {
+const Main = (mySeting,mapStateToProps ) => {
     let seting = {
         id: '', //应用唯一id表示
         url: '', //请求地址
@@ -25,7 +25,7 @@ const Main = mySeting => {
         }
 
         render() {
-            return <this.props.seting.component {...this.props} state={this.props.state.toJS()}/>;
+            return <this.props.seting.component {...this.props} />;
         }
 
         componentDidMount() {//获取数据
@@ -47,7 +47,8 @@ const Main = mySeting => {
     }
 
     //mapStateToProps and mapDispatchToProps
-    return connect(state => { //将顶层组件与模版绑定后return回去，配置路由的时候用的就是和redux绑定的组件，所以其实每个路由匹配的都是同一个组件，只不过这个组件的内容不同
+    //将顶层组件与模版绑定后return回去，配置路由的时候用的就是和redux绑定的组件，所以其实每个路由匹配的都是同一个组件，只不过这个组件的内容不同
+    return connect(state => {
         let {producRecord, saleRecord,requestData, testData,counter} = state;
         console.log('mapState to prop1s');
         console.log(state);
@@ -57,7 +58,7 @@ const Main = mySeting => {
             saleRecord ,
             requestData ,
             value: counter.count
-        } 
+        }
     }, action)(Index); //连接redux
 }
 

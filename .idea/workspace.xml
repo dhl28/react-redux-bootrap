@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2bbeab0-2ebd-4800-90e5-d6bb822189c6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/common/template.js" afterPath="$PROJECT_DIR$/src/Components/common/template.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Redux/Action/Index.js" afterPath="$PROJECT_DIR$/src/Redux/Action/Index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Redux/Reducer/Index.js" afterPath="$PROJECT_DIR$/src/Redux/Reducer/Index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/layout/Header.js" afterPath="$PROJECT_DIR$/src/layout/Header.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/routes/showcase-route.js" afterPath="$PROJECT_DIR$/src/routes/showcase-route.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Components/show-case/Counter.js" afterPath="$PROJECT_DIR$/src/Components/show-case/Counter.js" />
     </list>
     <ignored path="antd-demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Counter.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Counter.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/show-case/Counter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+            <state relative-caret-position="391">
+              <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
               <folding>
                 <element signature="e#1#41#0" expanded="true" />
               </folding>
@@ -140,11 +136,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="template.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="template.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Components/common/template.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
+            <state relative-caret-position="266">
+              <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -204,8 +200,8 @@
         <option value="$PROJECT_DIR$/src/Redux/Action/Index.js" />
         <option value="$PROJECT_DIR$/src/Redux/Reducer/Counter.js" />
         <option value="$PROJECT_DIR$/src/Redux/Action/Counter.js" />
-        <option value="$PROJECT_DIR$/src/Components/common/template.js" />
         <option value="$PROJECT_DIR$/src/Components/show-case/Counter.js" />
+        <option value="$PROJECT_DIR$/src/Components/common/template.js" />
       </list>
     </option>
   </component>
@@ -517,12 +513,12 @@
       <workItem from="1501643112817" duration="1050000" />
       <workItem from="1501651755759" duration="14274000" />
       <workItem from="1501720188526" duration="17533000" />
-      <workItem from="1501810421861" duration="6477000" />
+      <workItem from="1501810421861" duration="6848000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59289000" />
+    <option name="totallyTimeSpent" value="59660000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -937,21 +933,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/common/template.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="32" column="47" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/show-case/Counter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+        <state relative-caret-position="391">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
           <folding>
             <element signature="e#1#41#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/common/template.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="27" column="64" selection-start-line="27" selection-start-column="64" selection-end-line="27" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
