@@ -2,14 +2,10 @@
  * Created by admin on 2017/7/31.
  */
 import React, {Component} from 'react';
-import {Header,template} from '../common/mixin';
-import {Tool} from '../../Config/Tool';
 import * as mapDispatchToProps from '../../Redux/Action/show-case/Users'
 import {connect} from 'react-redux'
 
-import { Table, Popconfirm, Button } from 'antd';
-
-
+import {Table, Popconfirm, Button} from 'antd';
 
 
 class Products extends Component {
@@ -20,9 +16,14 @@ class Products extends Component {
         });
     }
 
+    componentDidMount() {//获取数据
+        let {loadData} = this.props;
+        loadData('/users');
+    }
+
     render() {
-        let {users,state,onDelete} = this.props;
-        users = users||[];
+        let {users, state, onDelete} = this.props;
+        users = users || [];
 
         const columns = [{
             title: 'Name',
@@ -55,25 +56,26 @@ class Products extends Component {
         return (
             <div className="container">
                 <h2>用户列表</h2>
-                <Table columns={columns} dataSource={users} />
+                <Table columns={columns} dataSource={users}/>
             </div>
         );
     }
 }
 
 
-
-
 const mapStateToProps = (state)=> {
-    let {fetchData} = state;
+    let {users} = state;
+    console.log('mapStateToProps===================');
+    console.log(users);
     console.log('mapStateToProps===================');
     return {
-        state: fetchData,
-        users: fetchData.get('data')
+        isFetching: users.isFetching,
+        users: users.data
     }
 }
-export default template({
-    id: 'homepage',  //应用关联使用的redux
-    component: Products, //接收数据的组件入口
-    url: '/users',
-},mapStateToProps);
+
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Products)
