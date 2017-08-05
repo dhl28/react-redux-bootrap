@@ -1,9 +1,11 @@
 /**
  * Created by admin on 2017/8/4.
  */
+export const INCREASE = 'increase'
+export const DECREASE = 'decrease'
 // Action Creator
-const increaseAction = { type: 'increase' }
-const decreaseAction = { type: 'decrease' }
+const increaseAction = { type: INCREASE }
+const decreaseAction = { type: DECREASE }
 
 
 export const onIncreaseClick = () => {

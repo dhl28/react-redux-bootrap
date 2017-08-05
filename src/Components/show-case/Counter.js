@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 
 import { Button } from 'antd';
-import * as mapDispatchToProps from '../../Redux/Action/Counter'
+import * as mapDispatchToProps from '../../Redux/Action/show-case/Counter'
 
 import './counter.css'
 

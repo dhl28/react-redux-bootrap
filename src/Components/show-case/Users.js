@@ -4,40 +4,12 @@
 import React, {Component} from 'react';
 import {Header,template} from '../common/mixin';
 import {Tool} from '../../Config/Tool';
-import * as mapDispatchToProps from '../../Redux/Action/Users'
+import * as mapDispatchToProps from '../../Redux/Action/show-case/Users'
 import {connect} from 'react-redux'
 
-import { Table, Icon } from 'antd';
+import { Table, Popconfirm, Button } from 'antd';
 
 
-const columns = [{
-    title: 'Name',
-    dataIndex: 'name',
-    key: 'name',
-    render: text => <a href="#">{text}</a>,
-}, {
-    title: 'Age',
-    dataIndex: 'age',
-    key: 'age',
-}, {
-    title: 'Address',
-    dataIndex: 'address',
-    key: 'address',
-}, {
-    title: 'Action',
-    key: 'action',
-    render: (text, record) => (
-        <span>
-      <a href="#">Action 一 {record.name}</a>
-      <span className="ant-divider" />
-      <a href="#">Delete</a>
-      <span className="ant-divider" />
-      <a href="#" className="ant-dropdown-link">
-        More actions <Icon type="down" />
-      </a>
-    </span>
-    ),
-}];
 
 
 class Products extends Component {
@@ -49,8 +21,34 @@ class Products extends Component {
     }
 
     render() {
-        let {users,state} = this.props;
+        let {users,state,onDelete} = this.props;
         users = users||[];
+
+        const columns = [{
+            title: 'Name',
+            dataIndex: 'name',
+            key: 'name',
+            render: text => <a href="#">{text}</a>,
+        }, {
+            title: 'Age',
+            dataIndex: 'age',
+            key: 'age',
+        }, {
+            title: 'Address',
+            dataIndex: 'address',
+            key: 'address',
+        }, {
+            title: 'Action',
+            key: 'action',
+            render: (text, record) => {
+                return (
+                    <Popconfirm title="Delete?" onConfirm={() => onDelete(record.key)}>
+                        <Button>Delete</Button>
+                    </Popconfirm>
+                );
+            },
+        }];
+
         console.log('users .....');
         console.log(users);
         console.log('users .....');
@@ -68,6 +66,7 @@ class Products extends Component {
 
 const mapStateToProps = (state)=> {
     let {fetchData} = state;
+    console.log('mapStateToProps===================');
     return {
         state: fetchData,
         users: fetchData.get('data')
