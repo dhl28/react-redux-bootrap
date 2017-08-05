@@ -17,8 +17,8 @@ export const fetchData = (state = defaultlState , action = {}) => {
             console.log('========fetchData=======');
             console.log(action);
             console.log('========fetchData=======');
-            // return Immutable.Map({'data':action.json,'isFetching':false});//返回一个新的state
-            return {'data':action.json,'isFetching':false};//返回一个新的state
+            return Immutable.Map({'data':action.json,'isFetching':false});//返回一个新的state
+            // return {'data':action.json,'isFetching':false};//返回一个新的state
         default:
             return state
     }

@@ -70,7 +70,7 @@ const mapStateToProps = (state)=> {
     let {fetchData} = state;
     return {
         state: fetchData,
-        users: fetchData.data
+        users: fetchData.get('data')
     }
 }
 export default template({
