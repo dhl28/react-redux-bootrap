@@ -1,18 +1,18 @@
-.counter-wrapper{
+.container {
     margin-top: 100px;
     text-align: center;
 }
-.counter-wrapper .value{
+
+.value {
     margin: 0 20px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
 }
-.counter-wrapper .ant-btn + .ant-btn{
+
+:global(  .ant-btn + .ant-btn) {
     margin-left: 10px;
 }
-.counter-wrapper h2{
+
+h2 {
     margin: 20px 0;
-}
-.counter-wrapper .ant-btn{
-    font-size: 20px;
 }

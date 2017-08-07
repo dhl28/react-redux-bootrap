@@ -5,17 +5,20 @@ import {connect} from 'react-redux'
 import { Button } from 'antd';
 import * as mapDispatchToProps from '../../Redux/Action/show-case/index'
 
-import './counter.css'
+import styles  from './counter.css'
 
 // React component
 class Main extends Component {
     render() {
+        console.log('====styles')
+        console.log(styles)
+        console.log('====styles')
         const {value, onIncreaseClick, onDecreaseClick,loadData} = this.props
         console.log(this.props);
         return (
-            <div className="counter-wrapper">
+            <div className={styles.container}>
                 <h2>计数器</h2>
-                <span className="value">{value}</span>
+                <span className={styles.value}>{value}</span>
                 <Button  type="primary" onClick={onIncreaseClick}>+</Button>
                 <Button onClick={onDecreaseClick}>-</Button>
                 <Button onClick={()=>loadData('/users')}>刷新用户列表</Button>
