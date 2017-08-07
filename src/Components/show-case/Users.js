@@ -2,7 +2,7 @@
  * Created by admin on 2017/7/31.
  */
 import React, {Component} from 'react';
-import * as mapDispatchToProps from '../../Redux/Action/show-case/Users'
+import * as mapDispatchToProps from '../../Redux/Action/show-case/index'
 import {connect} from 'react-redux'
 
 import {Table, Popconfirm, Button} from 'antd';
