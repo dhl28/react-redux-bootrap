@@ -7,6 +7,8 @@ import {connect} from 'react-redux'
 
 import {Table, Popconfirm, Button} from 'antd';
 
+import Counter from './Counter'
+
 
 class Products extends Component {
     handleClick = (e) => {
@@ -55,6 +57,7 @@ class Products extends Component {
         console.log('users .....');
         return (
             <div className="container">
+                <Counter></Counter>
                 <h2>用户列表</h2>
                 <Table columns={columns} dataSource={users}/>
             </div>

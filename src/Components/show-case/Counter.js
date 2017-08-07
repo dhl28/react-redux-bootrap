@@ -8,7 +8,7 @@ import * as mapDispatchToProps from '../../Redux/Action/show-case/Counter'
 import './counter.css'
 
 // React component
-class Counter extends Component {
+class Main extends Component {
     render() {
         const {value, onIncreaseClick, onDecreaseClick} = this.props
         console.log(this.props);
@@ -23,7 +23,7 @@ class Counter extends Component {
     }
 }
 
-Counter.propTypes = {
+Main.propTypes = {
     value: PropTypes.number.isRequired,
     onIncreaseClick: PropTypes.func.isRequired,
     onDecreaseClick: PropTypes.func.isRequired
@@ -38,7 +38,9 @@ const mapStateToProps = (state)=> {
 }
 
 
-export default connect(
+ const Counter = connect(
     mapStateToProps,
     mapDispatchToProps
-)(Counter)
+)(Main)
+
+export default Counter

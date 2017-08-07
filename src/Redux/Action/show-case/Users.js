@@ -10,6 +10,7 @@ import {fetchPosts} from '../Util';
 export const START_GET_USER = 'START_GET_USER';
 export const GET_USER_SUCCESS = 'GET_USER_SUCCESS';
 export const USER_DELETE = 'USER_DELETE';
+export const RELOAD_USER = 'RELOAD_USER';
 
 export const loadData = (path, postData) => {
     return dispatch => {
