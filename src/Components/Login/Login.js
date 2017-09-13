@@ -6,7 +6,7 @@ import { browserHistory } from 'react-router'
 import {Header, template} from '../common/mixin';
 import {Tool} from '../../Config/Tool';
 import {Form, Icon, Input, Button, Checkbox} from 'antd';
-import './login.css'
+import './login.less'
 const FormItem = Form.Item;
 
 class Login extends Component {
